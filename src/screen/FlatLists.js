@@ -70,21 +70,21 @@ export default function FlatLists({navigation}) {
   return (
     <View style={{flex: 1, marginVertical: 40}}>
       <TouchableOpacity
-      onPress={()=>{
-        navigation.goBack()
-      }}
+        onPress={() => {
+          navigation.goBack();
+        }}
         style={{
           alignItems: 'center',
           // justifyContent: 'center',
           backgroundColor: 'blue',
           paddingVertical: 10,
         }}>
-        <Text style={{color: 'white',fontSize:20}}>FlatList</Text>
+        <Text style={{color: 'white', fontSize: 20}}>FlatList</Text>
       </TouchableOpacity>
       <FlatList
         data={data}
         renderItem={renderItem}
-        keyExtractor={item => item.id}
+        keyExtractor={item => item.id + ''}
         refreshing={isLoadingRefresh.current}
         onRefresh={onRefresh}
         onEndReachedThreshold={0.2}

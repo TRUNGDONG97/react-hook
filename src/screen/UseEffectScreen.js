@@ -19,28 +19,25 @@ export default function UseEffectScreen({navigation}) {
     return () => {
       console.log('componentUnMount');
     };
-  }, [status.current]);
+  }, []);
   useLayoutEffect(() => {
     console.log('componentDidMount useLayoutEffect');
     return () => {
       console.log('componentUnMount useLayoutEffect');
     };
-  }, [status.current]);
+  }, []);
   const changeStatus = () => {
-    status.current = status.current + 1;
+    // status.current = status.current + 1;
     setState(state + 1);
     console.log(status.current, 'status.current');
     console.log(state, 'state');
   };
-  const functionUseMemo = useCallback(
-    type => {
-      console.log('useMemo', type);
-    },
-    [],
-  );
+  const functionUseCallback = useCallback(() => {
+    return <Text>{state}</Text>;
+  }, [status.current]);
   return (
     <View style={{flex: 1, marginVertical: 40}}>
-      {functionUseMemo("dsd")}
+      {functionUseCallback()}
       <TouchableOpacity
         onPress={() => {
           navigation.goBack();

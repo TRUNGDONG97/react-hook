@@ -9,6 +9,7 @@ import HomeScreen from './src/screen/Home';
 import FlatListScreen from './src/screen/FlatLists';
 import UseEffectScreen from './src/screen/UseEffectScreen';
 import UseReducerScreen from './src/screen/UseReducerScreen';
+import ReRenderItemFlatList from './src/screen/ReRenderItemFlatList'
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
         <Stack.Screen name="FlatLists" component={FlatListScreen} />
         <Stack.Screen name="UseEffects" component={UseEffectScreen} />
         <Stack.Screen name="UseReducerScreen" component={UseReducerScreen} />
+        <Stack.Screen name="ReRenderItemFlatList" component={ReRenderItemFlatList} />
       </Stack.Navigator>
     </NavigationContainer>
   );

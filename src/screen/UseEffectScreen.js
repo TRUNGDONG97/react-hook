@@ -7,7 +7,7 @@ import React, {
   useCallback,
 } from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
-
+import {helloio} from '../Mockup/dataFlatList'
 export default function UseEffectScreen({navigation}) {
   const [TextChange, setTextChange] = useState('hello');
   const [state, setState] = useState(2);
@@ -51,7 +51,7 @@ export default function UseEffectScreen({navigation}) {
         <Text style={{color: 'white', fontSize: 20}}>UseEffectScreen</Text>
       </TouchableOpacity>
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <Text>{TextChange}</Text>
+        <Text>{helloio.hhhh}</Text>
       </View>
       <TouchableOpacity
         onPress={changeStatus}

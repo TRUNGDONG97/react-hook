@@ -59,6 +59,20 @@ export default function Home({navigation}) {
         }}>
         <Text>ReRenderItemInFlatList</Text>
       </TouchableOpacity>
+      <TouchableOpacity
+        style={{
+          height: 30,
+          width: '80%',
+          backgroundColor: 'gray',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginTop: 30,
+        }}
+        onPress={() => {
+          navigation.navigate('RNMap');
+        }}>
+        <Text>Map</Text>
+      </TouchableOpacity>
     </View>
   );
 }

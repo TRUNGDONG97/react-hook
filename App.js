@@ -11,7 +11,8 @@ import UseEffectScreen from './src/screen/UseEffectScreen';
 import UseReducerScreen from './src/screen/UseReducerScreen';
 import ReRenderItemFlatList from './src/screen/ReRenderItemFlatList';
 import RNMap from './src/screen/RNMap';
-import MapViewScreen from './src/screen/MapViewScreen'
+import MapViewScreen from './src/screen/MapViewScreen';
+import ScrollableViewScreen from './src/screen/ScrollableViewScreen';
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -27,7 +28,11 @@ export default function App() {
           component={ReRenderItemFlatList}
         />
         <Stack.Screen name="RNMap" component={RNMap} />
-        <Stack.Screen name="MapView" component={MapViewScreen}/>
+        <Stack.Screen name="MapView" component={MapViewScreen} />
+        <Stack.Screen
+          name="ScrollableViewScreen"
+          component={ScrollableViewScreen}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -73,6 +73,20 @@ export default function Home({navigation}) {
         }}>
         <Text>Map</Text>
       </TouchableOpacity>
+      <TouchableOpacity
+        style={{
+          height: 30,
+          width: '80%',
+          backgroundColor: 'gray',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginTop: 30,
+        }}
+        onPress={() => {
+          navigation.navigate('ScrollableViewScreen');
+        }}>
+        <Text>ScrollableViewScreen</Text>
+      </TouchableOpacity>
     </View>
   );
 }
